@@ -1,43 +1,29 @@
 import React from 'react';
 import CartWidget from './cartwidget';
+import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
 const NavBar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="/">D-Shop</a>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <Link className="navbar-brand" to="/">D-Shop</Link>
             <ul className="navbar-nav ml-auto">
             <li className="nav-item">
-                <a className="nav-link" href="/">Home</a>
+                <Link className="nav-link" to="/">Home</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/">Log In</a>
+                <Link className="nav-link" to="/">Log In</Link>
             </li>
             <li className="nav-item">
-                <a className="nav-link" href="/">Contact Us</a>
+                <Link className="nav-link" to="/">Contact Us</Link>
             </li>
-            <li><CartWidget /></li>
+            <li>
+                <CartWidget />
+            </li>
             </ul>
         </nav>
     );
 }
 
 export default NavBar;
-
-/* 
-const NavBar = () => {
-    return (
-        <nav>
-            <div className="nav-wrapper">
-            <a href="/" className="brand-logo">D-Shop</a>
-            <ul id="nav-mobile" className="right hide-on-med-and-down">
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Log In</a></li>
-                <li><a href="/">Contact Us</a></li>
-                <li><CartWidget /></li>
-            </ul>
-            </div>
-        </nav>
-    );
-} */
